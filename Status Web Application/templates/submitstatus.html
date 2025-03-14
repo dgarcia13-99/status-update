@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head><title>Update your status</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/static/stylesheet.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>PalTrack</h1>
+    </div>
+
+    <div class="update"> 
+        <h2>Update your status!</h2>
+        <form action="/newstatus/submit" method="post">
+            <p><label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+            </p>
+            <p>
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description">
+            </p>
+            <input type="submit" value="Update">
+        </form>
+    </div>
+</body>
+
+</html>

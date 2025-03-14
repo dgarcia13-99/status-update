@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head><title>{{username}}'s Status History</title>
+<link rel="stylesheet" href="/static/stylesheet.css" type="text/css"/>
+</head>
+
+<body>
+<h1>{{username}}'s Status History</h1>
+
+<div class="display_table">
+    <table>
+        <tr>
+            <th>Username</th>
+            <th>Status Description</th>
+            <th>Date</th>
+            <th>Time</th>
+        </tr>
+        
+        {% for h in history_info %}
+        <tr> 
+            <td>{{h[0]}}</td>
+            <td>{{h[1]}}</a></td>
+            <td>{{h[2]}}</td>
+            <td>{{h[3]}}</td>
+        </tr>
+        {% endfor %}
+        </table>
+
+</div>
+
+<div>
+    <p><a href="/">Home</a><p>
+</div>
+
+</body>
+</html>

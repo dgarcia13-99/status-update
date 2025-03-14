@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head><title>Search user</title>
+
+    <link rel="stylesheet" href="/static/stylesheet.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>PalTrack</h1>
+    </div>
+
+    <div class="user_search"> 
+        <h2>Search users</h2>
+        <h3>Search for a friend if you know the username or find the username below</h3>
+        <form action="/search/current" method="post">
+            <p><label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+            </p>
+            <p>
+            <input type="submit" value="Search">
+        </form>
+    </div>
+
+    <div class="user_table">
+
+        <table>
+            <tr>
+              <th>Username</th>
+              <th>Current Status</th>
+            </tr>
+            {% for u in all_users %}
+            <tr> 
+              <td>{{u[0]}}</td>
+              <td><a href="/current_status/{{u[0]}}">{{u[0]}}'s Current Status</a></td>
+            </tr>
+            {% endfor %}
+          </table>
+        
+    </div>
+</body>
+
+<div>
+    <p><a href="/">Home</a><p>
+</div>
+
+</html>
